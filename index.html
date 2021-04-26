@@ -17,22 +17,29 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
 
-        <script>Kakao.init('cfc81e62495a8be34ee51bcc44f563bf');</script>
+        <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+        <script>Kakao.init('8420fdea8aee63bc5d0d28e748384f6b');</script>
     </head>
     <body>
-        <div class="container-md text-center mt-5">
-        <div class="spinner-border text-primary" role="status">
-            <span class="visually-hidden">Loading...</span>
-        </div>
+        <div class="box text-center loader4">
+            <!-- <div class="container-md text-center mt-5">
+                <div class="spinner-border text-primary" role="status"></div><br>
+                <h3 class="visually-hidden">Loading...</h3>
+            </div> -->
         </div>
     </body>
     <script type="text/javascript">
-        function kakao = () => {
-            Kakao.Link.sendCustom({templateId: Number("52398")});
+        const kakao = () => {
+                Kakao.Link.sendCustom({templateId: Number("52470")});
+                return false;
         }
 
         $(document).ready(function(){
-            kakao();
+            setTimeout(() => {
+                        setTimeout(() => {
+                            kakao();
+                            }, 5000);
+                        }, 0); 
         });
     </script>
 </html>
